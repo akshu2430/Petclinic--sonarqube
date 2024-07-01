@@ -14,7 +14,7 @@ pipeline {
                 // Use Ansible playbook to deploy
                 ansiblePlaybook(
                     playbook: 'ansible/playbook.yml',
-                    // inventory: 'ansible/hosts',
+                    inventory: 'ansible/hosts',
                 )
             }
         }
