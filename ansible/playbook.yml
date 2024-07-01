@@ -1,0 +1,16 @@
+# ansible/playbook.yml
+---
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: Stop current application
+      command: systemctl stop tomcat.service
+      ignore_errors: yes
+
+    - name: Copy new WAR file
+      copy:
+        src: ../java-app/target/petclinic.jar
+        dest: /opt/tomcat/webapps
+
+    - name: Start application
+      command: systemctl start tomcat.service
