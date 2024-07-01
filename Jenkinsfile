@@ -15,7 +15,6 @@ pipeline {
                 ansiblePlaybook(
                     playbook: 'ansible/playbook.yml',
                     inventory: 'ansible/hosts',
-                    extras: '-e "your_custom_var=foo"'
                 )
             }
         }
