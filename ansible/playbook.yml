@@ -9,7 +9,7 @@
 
     - name: Copy new WAR file
       copy:
-        src: /var/lib/jenkins/workspace/jenkins-ansible configuration/target/petclinic.war
+        src: /var/lib/jenkins/workspace/Jenkins-ansible configuration/target/petclinic.war
         dest: /opt/tomcat/webapps
 
     - name: Start application
