@@ -1,6 +1,7 @@
 # ansible/playbook.yml
 ---
 - hosts: localhost
+  become: yes
   tasks:
     - name: Stop current application
       command: systemctl stop tomcat.service
