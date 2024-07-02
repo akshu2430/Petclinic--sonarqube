@@ -1,6 +1,6 @@
 # ansible/playbook.yml
 ---
-- hosts: all
+- hosts: webservers
   tasks:
     - name: Stop current application
       command: systemctl stop tomcat.service
