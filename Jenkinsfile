@@ -13,8 +13,8 @@ pipeline {
             steps {
                 // Use Ansible playbook to deploy
                 ansiblePlaybook(
-                    playbook: 'ansible/playbook.yml'
-                    // inventory: 'ansible/hosts',
+                    playbook: '/var/lib/jenkins/workspace/Jenkins-ansible configuration/ansible/playbook.yml'
+                    inventory: '/var/lib/jenkins/workspace/Jenkins-ansible configuration/ansible/inventory',
                 )
             }
         }
